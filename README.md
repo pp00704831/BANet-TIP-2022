@@ -26,7 +26,7 @@ For example:
 python train.py
 ```
 ### **Testing**
-Download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './checkpoints'
+For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './checkpoints'
 
 **For testing on GoPro dataset**
 ```
