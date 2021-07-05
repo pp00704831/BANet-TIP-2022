@@ -23,7 +23,7 @@ For example:
 python train.py
 ```
 ### **Testing**
-Download the GoPro pretrained weights into './checkpoints'
+Download the GoPro trained model into './checkpoints'
 
 **For testing on GoPro dataset**
 ```
