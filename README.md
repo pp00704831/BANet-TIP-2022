@@ -17,7 +17,7 @@ pip install opencv-python tqdm pyyaml joblib glog scikit-image tensorboardX albu
 ```
 
 ### **Training**
-Download "[GoPro]"(https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing) dataset into './datasets' </br>
+Download "[GoPro](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
 For example: 
 './datasets/GoPro/train/blur/\*\*/\*.png'
 
