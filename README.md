@@ -6,6 +6,7 @@ Pytorch Implementation of "[BANet: Blur-aware Attention Networks for Dynamic Sce
 
 
 ## Installation
+The implementation of our BANet is modified from "[DeblurGANv2](https://github.com/VITA-Group/DeblurGANv2)"
 ```
 git clone https://github.com/pp00704831/BANet.git
 cd BANet
