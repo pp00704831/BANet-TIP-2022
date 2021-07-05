@@ -33,15 +33,18 @@ Download the GoPro trained model into './checkpoints'
 python predict_BANet_GoPro_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
 ```
 **For testing on HIDE dataset**
+Download "[HIDE](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets'
 ```
 python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
 ```
 ### **Evaluation**
 **For evaluation on GoPro results in MATLAB**
+Download "[BANet_GoPro_result](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './out'
 ```
 evaluation_GoPro.m
 ```
 **For evaluation on HIDE results in MATLAB**
+Download "[BANet_HIDE_result](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './out'
 ```
 evaluation_HIDE.m
 ```
