@@ -39,7 +39,7 @@ python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoP
 **For testing your own training weight on GoPro or HIDE**  </br>
 
 Take GoPro for example
-* Rename the output_path in line 31 in the 'predict_BANet_GoPro_test_results.py'
+* Rename the output_path in line 31 in the predict_BANet_GoPro_test_results.py
 * Chage weight path command to --weights_path ./final_BANet.pth 
 
 
