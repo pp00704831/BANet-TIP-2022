@@ -41,7 +41,7 @@ python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoP
 
 Take GoPro for example
 * Chang the 'output_path' in 'predict_BANet_GoPro_test_results.py'
-* use --weights_path final_BANet.pth 
+* Chage weight path command to --weights_path ./final_BANet.pth 
 
 
 ### **Evaluation**
