@@ -33,11 +33,12 @@ For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth]
 python predict_BANet_GoPro_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
 ```
 **For testing on HIDE dataset**
-Download "[HIDE](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets'
+</br>
+Download HIDE dataset into './datasets'
 ```
 python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
 ```
-**For testing your own training weight on GoPro or HIDE**
+**For testing your own training weight on GoPro or HIDE** </br>
 Take GoPro for example
 * Chang the 'output_path' in 'predict_BANet_GoPro_test_results.py'
 * use --weights_path final_BANet.pth 
