@@ -1,0 +1,1 @@
+Put the checkpoints 'BANet_GoPro.pth' in the folder './checkpoints'
