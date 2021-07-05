@@ -1,10 +1,10 @@
 # BANet
 Pytorch Implementation of "[BANet: Blur-aware Attention Networks for Dynamic Scene Deblurring](https://arxiv.org/abs/2101.07518)"
 
-![](./figure/Disentangle.png#pic_right)
-</br>
+
 <img src="./figure/Disentangle.png" width = "900" height = "300" div align=center />
-![](./figure/Architecture.png)
+<img src="./figure/Architecture" width = "900" height = "300" div align=center />
+
 
 ## Installation
 ```
