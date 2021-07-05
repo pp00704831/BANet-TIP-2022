@@ -3,7 +3,7 @@ Pytorch Implementation of "[BANet: Blur-aware Attention Networks for Dynamic Sce
 
 
 <img src="./figure/Disentangle.png" width = "900" height = "300" div align=center />
-<img src="./figure/Architecture" width = "900" height = "300" div align=center />
+<img src="./figure/Architecture.png" width = "900" height = "300" div align=center />
 
 
 ## Installation
