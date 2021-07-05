@@ -37,6 +37,12 @@ Download "[HIDE](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75n
 ```
 python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
 ```
+**For testing your own training weight on GoPro or HIDE**
+Take GoPro for example
+* Chang the 'output_path' in 'predict_BANet_GoPro_test_results.py'
+* use --weights_path final_BANet.pth 
+
+
 ### **Evaluation**
 **For evaluation on GoPro results in MATLAB**
 Download "[BANet_GoPro_result](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './out'
