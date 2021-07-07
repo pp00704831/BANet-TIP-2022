@@ -13,7 +13,7 @@ from dataset import PairedDataset
 from metric_counter import MetricCounter
 from models.losses import get_loss
 from models.models import get_model
-from models.networks import get_nets
+from models.gs202.networks import get_nets
 from schedulers import LinearDecay, WarmRestart
 import math
 import numpy as np
@@ -48,7 +48,7 @@ class Trainer:
 
         for epoch in range(start_epoch, config['num_epochs']):
             self._run_epoch(epoch)
-            if epoch % 30 == 0 or (config['num_epochs']-1):
+            if epoch % 30 == 0 or epoch == (config['num_epochs']-1):
                 self._validate(epoch)
             self.scheduler_G.step()
 
