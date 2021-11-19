@@ -13,7 +13,7 @@ from dataset import PairedDataset
 from metric_counter import MetricCounter
 from models.losses import get_loss
 from models.models import get_model
-from models.gs202.networks import get_nets
+from models.networks import get_nets
 from schedulers import LinearDecay, WarmRestart
 import math
 import numpy as np
