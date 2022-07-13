@@ -1,28 +1,39 @@
 import torch
-import torch.autograd as autograd
 import torch.nn as nn
-import torchvision.models as models
-import torchvision.transforms as transforms
-from torch.autograd import Variable
-from util.image_pool import ImagePool
 
+class CharbonnierLoss(nn.Module):
+    """Charbonnier Loss (L1)"""
 
-###############################################################################
-# Functions
-###############################################################################
+    def __init__(self, eps=1e-3):
+        super(CharbonnierLoss, self).__init__()
+        self.eps = eps
 
-class L2_Loss():
+    def forward(self, x, y):
+        diff = x - y
+        # loss = torch.sum(torch.sqrt(diff * diff + self.eps))
+        loss = torch.mean(torch.sqrt((diff * diff) + (self.eps * self.eps)))
+        return loss
 
-    def get_loss(self, fakeIm, realIm):
-        return 0.5 * nn.MSELoss()(fakeIm, realIm)
+class BANet_loss(nn.Module):
 
-    def __call__(self, fakeIm, realIm):
-        return self.get_loss(fakeIm, realIm)
+    def __init__(self, ):
+        super(BANet_loss, self).__init__()
 
+        self.char = CharbonnierLoss()
+        self.l1 = nn.L1Loss()
+    def forward(self, restore, sharp):
+
+        char = self.char(restore, sharp)
+        restore_fft = torch.rfft(restore, signal_ndim=2, normalized=False, onesided=False)
+        sharp_fft = torch.rfft(sharp, signal_ndim=2, normalized=False, onesided=False)
+        fft_loss = 0.01 * self.l1(restore_fft, sharp_fft)
+        loss = char + fft_loss
+
+        return loss
 
 def get_loss(model):
-    if model['content_loss'] == 'L2':
-        content_loss = L2_Loss()
+    if model['content_loss'] == 'BANet_loss':
+        content_loss = BANet_loss()
     else:
         raise ValueError("ContentLoss [%s] not recognized." % model['content_loss'])
     return content_loss
