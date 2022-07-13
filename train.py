@@ -31,9 +31,9 @@ class Trainer:
     def train(self):
         self._init_params()
         start_epoch = 0
-        if os.path.exists('last_BANet.pth'):
+        if os.path.exists('last_BANet_GoPro.pth'):
             print('load_pretrained')
-            training_state = (torch.load('last_BANet.pth'))
+            training_state = (torch.load('last_BANet_GoPro.pth'))
             start_epoch = training_state['epoch']
             new_weight = self.netG.state_dict()
             new_weight.update(training_state['model_state'])
@@ -44,6 +44,12 @@ class Trainer:
             new_scheduler = self.scheduler_G.state_dict()
             new_scheduler.update(training_state['scheduler_state'])
             self.scheduler_G.load_state_dict(new_scheduler)
+        else:
+            print('load_pretrained')
+            training_state = (torch.load('final_BANet_pretrained.pth'))
+            new_weight = self.netG.state_dict()
+            new_weight.update(training_state)
+            self.netG.load_state_dict(new_weight)
 
 
         for epoch in range(start_epoch, config['num_epochs']):
@@ -76,11 +82,10 @@ class Trainer:
         i = 0
         for data in tq:
             inputs, targets = self.model.get_input(data)
-            outputs = self.netG(inputs)
+            outputs = self.netG(inputs).clamp(-0.5, 0.5)
             self.optimizer_G.zero_grad()
             loss_G = self.criterionG(outputs, targets)
             loss_G.backward()
-            torch.nn.utils.clip_grad_norm_(self.netG.parameters(), 0.02)
             self.optimizer_G.step()
             self.metric_counter.add_losses(loss_G.item())
             curr_psnr, curr_ssim, img_for_vis = self.model.get_images_and_metrics(inputs, outputs, targets)
@@ -161,7 +166,7 @@ class Trainer:
 
 if __name__ == '__main__':
     with open('config/config.yaml', 'r') as f:
-        config = yaml.load(f)
+        config = yaml.safe_load(f)
 
     # setup
     torch.backends.cudnn.enabled = True
