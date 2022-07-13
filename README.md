@@ -22,30 +22,37 @@ Download "[GoPro](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75
 For example: 
 './datasets/GoPro/train/blur/\*\*/\*.png'
 
-**For training, run following commands.**
+**We train our BANner in two stages:** </br>
+**1) We pre-train for 3000 epochs on patch size 256x256. Please run the following commands.** </br>
+```
+python pretrained.py
+```
+
+**2) We fine-tune for 1000 epochs on patch size 512x512. Please run the following commands.** </br>
 ```
 python train.py
 ```
+
 ### **Testing**
 Download "[GoPro](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
 For example: 
 './datasets/GoPro/test/blur/\*\*/\*.png' </br>
-For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './checkpoints'
+For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)
 
 **For testing on GoPro dataset**
 ```
-python predict_BANet_GoPro_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
+python predict_BANet_GoPro_test_results.py --weights_path ./BANet_GoPro.pth 
 ```
 **For testing on HIDE dataset** </br>
-Download HIDE dataset into './datasets'
+Download "[HIDE](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
 ```
-python predict_BANet_HIDE_test_results.py --weights_path ./checkpoints/BANet_GoPro.pth 
+python predict_BANet_HIDE_test_results.py --weights_path ./BANet_GoPro.pth 
 ```
 **For testing your own training weight on GoPro or HIDE**  </br>
 
 Take GoPro for example
-* Rename the output_path in line 31 in the predict_BANet_GoPro_test_results.py
-* Chage weight path command to --weights_path ./final_BANet.pth 
+* Rename the 'output_path' in line 23 in the predict_BANet_GoPro_test_results.py
+* Chage weight path command to --weights_path ./final_BANet_GoPro.pth 
 
 
 ### **Evaluation**
