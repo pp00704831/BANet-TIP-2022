@@ -13,7 +13,7 @@ cd BANet
 conda create -n banet python=3.6
 source activate banet
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
-pip install opencv-python tqdm pyyaml joblib glog scikit-image tensorboardX albumentations
+pip install opencv-python tqdm pyyaml joblib glog scikit-image tensorboardX albumentations==1.1.0
 pip install -U albumentations[imgaug]
 ```
 
