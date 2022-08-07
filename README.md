@@ -67,3 +67,16 @@ Download "[BANet_HIDE_result](https://drive.google.com/drive/folders/1sZokl0e1NI
 ```
 evaluation_HIDE.m
 ```
+
+### **BANet+** 
+The training strategy is the same as BANet above. </br>
+### **Testing**
+Download the GoPro trained model "[BANet_Plus_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing) </br>
+**For testing on GoPro dataset**
+```
+python predict_BANet_Plus_GoPro_test_results.py --weights_path ./BANet_Plus_GoPro.pth 
+```
+**For testing on HIDE dataset**
+```
+python predict_BANet_Plus_HIDE_test_results.py --weights_path ./BANet_Plus_GoPro.pth 
+```
