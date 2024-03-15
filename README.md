@@ -19,7 +19,7 @@ pip install albumentations==1.1.0
 ```
 
 ### **Training**
-Download "[GoPro](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
+Download "[GoPro](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" dataset into './datasets' </br>
 For example: 
 './datasets/GoPro/train/blur/\*\*/\*.png'
 
@@ -38,14 +38,14 @@ python train.py
 Download "[GoPro](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" dataset into './datasets' </br>
 For example: 
 './datasets/GoPro/test/blur/\*\*/\*.png' </br>
-For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)
+For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)
 
 **For testing on GoPro dataset**
 ```
 python predict_BANet_GoPro_test_results.py --weights_path ./BANet_GoPro.pth 
 ```
 **For testing on HIDE dataset** </br>
-Download "[HIDE](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
+Download "[HIDE](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" dataset into './datasets' </br>
 ```
 python predict_BANet_HIDE_test_results.py --weights_path ./BANet_GoPro.pth 
 ```
@@ -58,12 +58,12 @@ Take GoPro for example
 
 ### **Evaluation**
 **For evaluation on GoPro results in MATLAB**
-Download "[BANet_GoPro_result](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './out'
+Download "[BANet_GoPro_result](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" into './out'
 ```
 evaluation_GoPro.m
 ```
 **For evaluation on HIDE results in MATLAB**
-Download "[BANet_HIDE_result](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" into './out'
+Download "[BANet_HIDE_result](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" into './out'
 ```
 evaluation_HIDE.m
 ```
@@ -71,7 +71,7 @@ evaluation_HIDE.m
 ### **BANet+** 
 The training strategy is the same as BANet above. </br>
 ### **Testing**
-Download the GoPro trained model "[BANet_Plus_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing) </br>
+Download the GoPro trained model "[BANet_Plus_GoPro.pth](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q) </br>
 **For testing on GoPro dataset**
 ```
 python predict_BANet_Plus_GoPro_test_results.py --weights_path ./BANet_Plus_GoPro.pth 
