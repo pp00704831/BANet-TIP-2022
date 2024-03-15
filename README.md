@@ -35,7 +35,7 @@ python train.py
 ```
 
 ### **Testing**
-Download "[GoPro](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)" dataset into './datasets' </br>
+Download "[GoPro](https://drive.google.com/drive/u/1/folders/0B1M5aNe46QPlflAtXzR2RzhwQWkzbGoyaS1HYlVSY2FBd1NMZ1BHbFFEdnROQl9NQjZDNVE?resourcekey=0-MBS_f0fXHrFCK2EiMswB6Q)" dataset into './datasets' </br>
 For example: 
 './datasets/GoPro/test/blur/\*\*/\*.png' </br>
 For reproducing our results, download the GoPro trained model "[BANet_GoPro.pth](https://drive.google.com/drive/folders/1sZokl0e1NIbQE9DF5d4q75nYTcX7nHvk?usp=sharing)
