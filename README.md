@@ -80,3 +80,15 @@ python predict_BANet_Plus_GoPro_test_results.py --weights_path ./BANet_Plus_GoPr
 ```
 python predict_BANet_Plus_HIDE_test_results.py --weights_path ./BANet_Plus_GoPro.pth 
 ```
+
+## Citation
+```
+@ARTICLE{Tsai2022BANet,
+  author={Tsai, Fu-Jen and Peng, Yan-Tsung and Tsai, Chung-Chi and Lin, Yen-Yu and Lin, Chia-Wen},
+  journal={IEEE Transactions on Image Processing}, 
+  title={BANet: A Blur-Aware Attention Network for Dynamic Scene Deblurring}, 
+  year={2022},
+  volume={31},
+  pages={6789-6799},
+}
+```
